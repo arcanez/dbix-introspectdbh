@@ -1,5 +1,6 @@
 package DBIx::IntrospectDBH;
 use Moo;
+use Moo::Role ();
 use Exporter::Declare;
 
 exports qw(introspect);
