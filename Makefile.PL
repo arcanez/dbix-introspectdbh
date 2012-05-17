@@ -11,6 +11,7 @@ WriteMakefile(
         'Moo' => 0,
     },
     BUILD_REQUIRES => {
+        'FindBin' => 0,
 	'Test::More' => 0,
     },
     META_MERGE      => {
