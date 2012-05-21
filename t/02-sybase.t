@@ -23,4 +23,14 @@ use lib "$Bin/lib";
   is($result->server_version, '4.9');
 }
 
+{
+  use MyDBH::Sybase::Microsoft_SQL_Server;
+  my $dbh = MyDBH::Sybase::Microsoft_SQL_Server->new;
+  my $result = introspect($dbh);
+
+  ok($result->does('DBIx::IntrospectDBH::Sybase::Microsoft_SQL_Server'));
+  is($result->driver->{Name}, 'Sybase');
+  is($result->server_version, '4.9');
+}
+
 done_testing;
