@@ -10,7 +10,7 @@ my %INFO = ( 18 => '4.9' );
 sub get_info { $INFO{$_[1]} }
 
 sub selectrow_arrayref {
-  return [ 'foo', 'bar', 'Sybase' ];
+  return [ 'foo', 'bar', '' ];
 }
 
 1;
