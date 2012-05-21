@@ -8,6 +8,7 @@ WriteMakefile(
     MIN_PERL_VERSION => '5.008001',
     PREREQ_PM => {
         'Exporter::Declare' => 0,
+        'Try::Tiny' => 0,
         'Moo' => 0,
     },
     BUILD_REQUIRES => {
