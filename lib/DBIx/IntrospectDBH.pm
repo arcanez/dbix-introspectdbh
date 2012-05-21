@@ -48,8 +48,9 @@ sub _dbh_get_info {
 }
 
 sub introspect {
-#  Moo::Role->create_class_with_roles(__PACKAGE__, qw(DBIx::IntrospectDBH::Test))->new( dbh => shift );
-   DBIx::IntrospectDBH->new( dbh => shift );
+  Moo::Role->create_class_with_roles(__PACKAGE__, "DBIx::IntrospectDBH::$_[0]->{Driver}{Name}")->new( dbh => $_[0] );
 }
+
+sub BUILD {}
 
 1;
